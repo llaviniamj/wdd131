@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbum do Templo - Filtrado</title>
+    <meta name="description" content="Página de galeria de fotos de templos responsiva e filtrável desenvolvida para a disciplina WDD 131.">
+    <meta name="author" content="Lavínia Morais de Jesus">
+    
+    <!-- Google Fonts: Montserrat e Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Folhas de Estilo -->
+    <link rel="stylesheet" href="estilos/templos-filtrados.css">
+    <link rel="stylesheet" href="estilos/templos-filtrados-grandes.css" media="(min-width: 640px)">
+    
+    <!-- Script JS -->
+    <script src="scripts/templos-filtrados.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Álbum do Templo</h1>
+            <button id="hamburger-btn" aria-label="Abrir menu de navegação">
+                <span class="open-icon">&#9776;</span>
+                <span class="close-icon" hidden>&times;</span>
+            </button>
+        </div>
+        <nav id="primary-nav">
+            <ul>
+                <li><a href="#" id="home" class="active">Página Inicial</a></li>
+                <li><a href="#" id="antigos">Antigos</a></li>
+                <li><a href="#" id="novos">Novos</a></li>
+                <li><a href="#" id="grandes">Grandes</a></li>
+                <li><a href="#" id="pequenos">Pequenos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 id="filter-title">Página Inicial</h2>
+        <div class="gallery"></div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Lavínia Morais de Jesus | Goiás, Brasil</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

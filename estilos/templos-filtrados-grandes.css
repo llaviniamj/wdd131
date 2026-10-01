@@ -1,0 +1,34 @@
+@media (min-width: 640px) {
+    .header-container {
+        width: auto;
+    }
+
+    #hamburger-btn {
+        display: none;
+    }
+
+    nav {
+        display: block !important;
+        width: auto;
+        margin-top: 0;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        background-color: transparent;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
