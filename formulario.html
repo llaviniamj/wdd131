@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação de Produto</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/formulario.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Avaliação do Produto</h1>
+    </header>
+
+    <main>
+        <form action="avaliacao.html" method="get" class="form-card">
+            
+            <!-- Nome do Produto -->
+            <div class="form-group">
+                <label for="produto">Nome do Produto <span class="required">*</span></label>
+                <select id="produto" name="produto" required>
+                    <option value="" disabled selected>Selecione um Produto...</option>
+                </select>
+            </div>
+
+            <!-- Classificação Geral -->
+            <div class="form-group">
+                <label>Classificação Geral <span class="required">*</span></label>
+                <div class="rating-group">
+                    <label class="star-label">
+                        <span>☆</span>
+                        <input type="radio" id="star1" name="classificacao" value="1" required>
+                    </label>
+                    <label class="star-label">
+                        <span>☆☆</span>
+                        <input type="radio" id="star2" name="classificacao" value="2" required>
+                    </label>
+                    <label class="star-label">
+                        <span>☆☆☆</span>
+                        <input type="radio" id="star3" name="classificacao" value="3" required>
+                    </label>
+                    <label class="star-label">
+                        <span>☆☆☆☆</span>
+                        <input type="radio" id="star4" name="classificacao" value="4" required>
+                    </label>
+                    <label class="star-label">
+                        <span>☆☆☆☆☆</span>
+                        <input type="radio" id="star5" name="classificacao" value="5" required>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Data de Instalação -->
+            <div class="form-group">
+                <label for="dataInstalacao">Data de Instalação <span class="required">*</span></label>
+                <input type="date" id="dataInstalacao" name="dataInstalacao" required>
+            </div>
+
+            <!-- Recursos Úteis -->
+            <div class="form-group">
+                <label>Quais recursos você achou úteis no produto? <em>(Marque todos que se aplicam)</em></label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="durabilidade" name="recursos" value="durabilidade"> Durabilidade</label>
+                    <label><input type="checkbox" id="facilidadeUso" name="recursos" value="facilidade_uso"> Facilidade de Uso</label>
+                    <label><input type="checkbox" id="desempenho" name="recursos" value="desempenho"> Desempenho</label>
+                    <label><input type="checkbox" id="design" name="recursos" value="design"> Design</label>
+                </div>
+            </div>
+
+            <!-- Avaliação Escrita -->
+            <div class="form-group">
+                <label for="avaliacaoEscrita">Avaliação Escrita <span>(Opcional)</span></label>
+                <textarea id="avaliacaoEscrita" name="avaliacaoEscrita" rows="4" placeholder="Escreva sua experiência com o produto..."></textarea>
+            </div>
+
+            <!-- Nome de Usuário -->
+            <div class="form-group">
+                <label for="usuario">Seu Nome <span>(Opcional)</span></label>
+                <input type="text" id="usuario" name="usuario" placeholder="Ex: João Silva">
+            </div>
+
+            <!-- Botão de Envio -->
+            <div class="form-group">
+                <input type="submit" value="Publicar Avaliação" class="btn-submit">
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="year"></span> Lavínia Morais de Jesus | Goiás, Brasil</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
