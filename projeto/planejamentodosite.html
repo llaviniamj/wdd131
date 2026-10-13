@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planejamento do Site | Portal do Leitor</title>
+  <link rel="stylesheet" href="planejamentodosite.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>Planejamento do Site</h1>
+    <h2>Portal do Leitor & Clube do Livro Interativo</h2>
+  </header>
+
+  <main>
+
+    <section class="card-planejamento">
+      <h2>1. Nome do Site</h2>
+      <p><strong>Nome Escolhido:</strong> Portal do Leitor</p>
+      <p><strong>Domínio sugerido:</strong> <code>portaldoleitor.github.io</code></p>
+      <p><strong>Justificativa:</strong> O nome é direto, acessível e reflete exatamente a proposta de ser um ponto de encontro e uma plataforma de ferramentas (como a estante de leituras) para pessoas apaixonadas por livros.</p>
+    </section>
+
+    <section class="card-planejamento">
+      <h2>2. Finalidade do Site</h2>
+      <p>
+        O <strong>Portal do Leitor</strong> é um site dinâmico e responsivo desenvolvido para conectar leitoras e leitores de diferentes gêneros literários. O site oferece um catálogo interativo de sugestões de leitura, filtro de obras por gênero, formulário de contato para dúvidas/recomendações e uma <strong>Estante Virtual Pessoal</strong> onde o usuário pode adicionar ou remover livros favoritos salvos via <code>localStorage</code> do navegador.
+      </p>
+    </section>
+
+    <section class="card-planejamento">
+      <h2>3. Cenários de Usuário (Público-Alvo)</h2>
+      <article class="cenario">
+        <h3>Cenário 1</h3>
+        <p><em>"Como leitor ávido de ficção científica e fantasia, como posso encontrar livros desses gêneros específicos e salvá-los em uma lista própria para ler depois no meu navegador?"</em></p>
+      </article>
+
+      <article class="cenario">
+        <h3>Cenário 2</h3>
+        <p><em>"Sou um novo participante do clube do livro e gostaria de saber como enviar uma sugestão de leitura para os próximos encontros do grupo."</em></p>
+      </article>
+    </section>
+
+    <section class="card-planejamento">
+      <h2>4. Esquema de Cores</h2>
+      <p>A paleta foi inspirada na atmosfera de um café aconchegante, combinando tons quentes de grãos de café com tons pastéis de creme e bege. Essa escolha reduz o cansaço visual em leituras prolongadas e reforça o clima de clube de leitura.</p>
+
+      <div class="paleta-container">
+        <div class="cor-box" style="background-color: #3E2723; color: #ffffff;">
+          <span>#3E2723</span>
+          <p>Café Expresso (Primary)<br><small>Headers, Footers e Títulos Principais</small></p>
+        </div>
+        <div class="cor-box" style="background-color: #A76D45; color: #ffffff;">
+          <span>#A76D45</span>
+          <p>Caramelo (Secondary)<br><small>Botões, Destaques e Bordas</small></p>
+        </div>
+        <div class="cor-box" style="background-color: #D7A87E; color: #2D241E;">
+          <span>#D7A87E</span>
+          <p>Cappuccino (Accent)<br><small>Links e Elementos Interativos</small></p>
+        </div>
+        <div class="cor-box" style="background-color: #FDFBF7; color: #2D241E; border: 1px solid #D7A87E;">
+          <span>#FDFBF7</span>
+          <p>Bege Creme (Background)<br><small>Fundo Geral das Páginas</small></p>
+        </div>
+        <div class="cor-box" style="background-color: #F4EBE1; color: #2D241E; border: 1px solid #D7A87E;">
+          <span>#F4EBE1</span>
+          <p>Espuma de Leite (Surface)<br><small>Fundo de Cards e Seções</small></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card-planejamento">
+      <h2>5. Tipografia</h2>
+      <div class="fonte-exemplo serif">
+        <h3>Fonte de Títulos: Merriweather (Serif)</h3>
+        <p>Uso: Utilizada em títulos (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>) para evocar a estética tradicional de livros impressos e literatura clássica.</p>
+      </div>
+
+      <div class="fonte-exemplo sans">
+        <h3>Fonte do Corpo de Texto: Segoe UI / Sans-serif</h3>
+        <p>Uso: Utilizada em parágrafos, menus de navegação, formulários e botões para garantir alta legibilidade e clareza visual em telas digitais.</p>
+      </div>
+    </section>
+
+    <section class="card-planejamento">
+      <h2>6. Wireframes da Página Inicial</h2>
+      <p>Abaixo estão as representações do layout estrutural planejado para a visualização móvel (mobile) e para telas maiores (desktop):</p>
+
+      <div class="wireframes-grid">
+        <div class="wireframe-box">
+          <h3>Visualização Mobile (Telas Pequenas)</h3>
+          <div class="wf-screen mobile">
+            <div class="wf-header">Header / Nav (Coluna)</div>
+            <div class="wf-hero">Hero Banner</div>
+            <div class="wf-content">Sobre o Clube</div>
+            <div class="wf-card">Card Livro 1</div>
+            <div class="wf-card">Card Livro 2</div>
+            <div class="wf-footer">Footer & Link Referências</div>
+          </div>
+        </div>
+
+        <div class="wireframe-box">
+          <h3>Visualização Desktop (Telas Largas)</h3>
+          <div class="wf-screen desktop">
+            <div class="wf-header-desktop">
+              <span>Logo / Nome</span>
+              <span>Nav (Horizontal: Home | Estante | Contato)</span>
+            </div>
+            <div class="wf-hero">Hero Banner (Destaques e Boas-vindas)</div>
+            <div class="wf-grid">
+              <div class="wf-card">Card Livro 1</div>
+              <div class="wf-card">Card Livro 2</div>
+              <div class="wf-card">Card Livro 3</div>
+            </div>
+            <div class="wf-footer">Footer com Copyright e Link para Referências</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Portal do Leitor — Documento de Planejamento do Site</p>
+  </footer>
+
+</body>
+</html>
