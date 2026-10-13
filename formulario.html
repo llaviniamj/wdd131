@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avaliação do Produto</title>
+    <title>Avaliação de Produto - Product Review</title>
+    <meta name="description" content="Formulário de avaliação e revisão de produtos para coleta de feedback dos clientes.">
+    <meta name="author" content="Lavínia Morais de Jesus">
     <link rel="stylesheet" href="estilos/estilo.css">
     <script src="scripts/formulario.js" defer></script>
 </head>
@@ -22,46 +24,58 @@
                 </select>
             </div>
 
-            <div class="form-item">
-                <label>Classificação Geral <span class="req">*</span></label>
+            <fieldset class="form-item border-none">
+                <legend class="label-style">Classificação Geral <span class="req">*</span></legend>
                 <div class="stars-container">
                     <div class="star-option">
-                        <span>☆</span>
+                        <label for="star1">☆</label>
                         <input type="radio" id="star1" name="classificacao" value="1" required>
                     </div>
                     <div class="star-option">
-                        <span>☆☆</span>
+                        <label for="star2">☆☆</label>
                         <input type="radio" id="star2" name="classificacao" value="2" required>
                     </div>
                     <div class="star-option">
-                        <span>☆☆☆</span>
+                        <label for="star3">☆☆☆</label>
                         <input type="radio" id="star3" name="classificacao" value="3" required>
                     </div>
                     <div class="star-option">
-                        <span>☆☆☆☆</span>
+                        <label for="star4">☆☆☆☆</label>
                         <input type="radio" id="star4" name="classificacao" value="4" required>
                     </div>
                     <div class="star-option">
-                        <span>☆☆☆☆☆</span>
+                        <label for="star5">☆☆☆☆☆</label>
                         <input type="radio" id="star5" name="classificacao" value="5" required>
                     </div>
                 </div>
-            </div>
+            </fieldset>
 
             <div class="form-item">
                 <label for="dataInstalacao">Data de Instalação <span class="req">*</span></label>
                 <input type="date" id="dataInstalacao" name="dataInstalacao" required>
             </div>
 
-            <div class="form-item">
-                <label>Quais recursos você achou úteis no produto?<br><em>(Marque todos que se aplicam)</em></label>
+            <fieldset class="form-item border-none">
+                <legend class="label-style">Quais recursos você achou úteis no produto?<br><em>(Marque todos que se aplicam)</em></legend>
                 <div class="checkbox-list">
-                    <label class="checkbox-item"><input type="checkbox" id="durabilidade" name="recursos" value="durabilidade"> Durabilidade</label>
-                    <label class="checkbox-item"><input type="checkbox" id="facilidadeUso" name="recursos" value="facilidade_uso"> Facilidade de Uso</label>
-                    <label class="checkbox-item"><input type="checkbox" id="desempenho" name="recursos" value="desempenho"> Desempenho</label>
-                    <label class="checkbox-item"><input type="checkbox" id="design" name="recursos" value="design"> Design</label>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="durabilidade" name="recursos" value="durabilidade">
+                        <label for="durabilidade">Durabilidade</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="facilidadeUso" name="recursos" value="facilidade_uso">
+                        <label for="facilidadeUso">Facilidade de Uso</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="desempenho" name="recursos" value="desempenho">
+                        <label for="desempenho">Desempenho</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="design" name="recursos" value="design">
+                        <label for="design">Design</label>
+                    </div>
                 </div>
-            </div>
+            </fieldset>
 
             <div class="form-item">
                 <label for="avaliacaoEscrita">Avaliação Escrita <span>(Opcional)</span></label>

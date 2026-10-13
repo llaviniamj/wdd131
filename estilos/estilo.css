@@ -36,7 +36,7 @@ main {
     padding: 2rem 1rem;
 }
 
-.form-container {
+.form-container, .confirmation-card {
     background-color: var(--blue-card);
     border: 1px solid var(--blue-border);
     border-radius: 6px;
@@ -45,18 +45,26 @@ main {
     max-width: 480px;
 }
 
+.border-none {
+    border: none;
+    padding: 0;
+}
+
 .form-item {
     margin-bottom: 1.2rem;
     display: flex;
     flex-direction: column;
 }
 
+.label-style,
 .form-item > label {
     font-weight: bold;
     margin-bottom: 0.4rem;
+    color: var(--text-color);
 }
 
-.form-item label span {
+.form-item label span,
+.label-style span {
     font-weight: normal;
     color: #555555;
     font-size: 0.9rem;
@@ -98,6 +106,11 @@ textarea {
     gap: 0.2rem;
 }
 
+.star-option label {
+    cursor: pointer;
+    font-weight: normal;
+}
+
 .checkbox-list {
     display: flex;
     flex-direction: column;
@@ -106,17 +119,20 @@ textarea {
 }
 
 .checkbox-item {
-    font-weight: normal;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+.checkbox-item label {
+    font-weight: normal;
     cursor: pointer;
 }
 
-.btn-submit {
+.btn-submit, .btn-back {
     width: 100%;
     background-color: var(--blue-medium);
-    color: white;
+    color: #ffffff;
     border: none;
     padding: 0.8rem;
     font-size: 1.1rem;
@@ -124,17 +140,49 @@ textarea {
     border-radius: 4px;
     cursor: pointer;
     margin-top: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.btn-submit:hover {
+.btn-submit:hover, .btn-back:hover {
     background-color: var(--blue-dark);
+}
+
+.confirmation-card {
+    text-align: center;
+}
+
+.counter-box {
+    background-color: #ffffff;
+    border: 1px solid var(--blue-border);
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+}
+
+.count-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--blue-medium);
+    display: block;
 }
 
 footer {
     background-color: var(--blue-dark);
-    color: white;
+    color: #ffffff;
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
     margin-top: auto;
+}
+
+@media (min-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .form-container, .confirmation-card {
+        padding: 2rem;
+    }
 }
