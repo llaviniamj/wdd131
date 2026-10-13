@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Gerenciamento do contador no localStorage
     let count = localStorage.getItem("reviewCounter");
     
     if (!count) {
@@ -10,13 +9,11 @@ document.addEventListener("DOMContentLoaded", () => {
     
     localStorage.setItem("reviewCounter", count);
 
-    // Exibe o número de avaliações no elemento
     const reviewCountDisplay = document.getElementById("reviewCount");
     if (reviewCountDisplay) {
         reviewCountDisplay.textContent = count;
     }
 
-    // Atualiza o rodapé
     setFooterDates();
 });
 

@@ -1,4 +1,3 @@
-// Array de Produtos Fornecido
 const produtos = [
   {
     id: "fc-1888",
@@ -30,19 +29,15 @@ const produtos = [
 document.addEventListener("DOMContentLoaded", () => {
     const selectProduto = document.getElementById("produto");
 
-    // Popula as opções do select dinamicamente
-    produtos.forEach(prod => {
-        const option = document.createElement("option");
-        option.value = prod.id; // Atribui o id como valor do option
-        option.textContent = prod.nome; // Atribui o nome como texto exibido
-        selectProduto.appendChild(option);
-    });
+    if (selectProduto) {
+        produtos.forEach(prod => {
+            const option = document.createElement("option");
+            option.value = prod.id;       
+            option.textContent = prod.nome; 
+            selectProduto.appendChild(option);
+        });
+    }
 
-    // Atualiza os dados dinâmicos do rodapé
-    setFooterDates();
-});
-
-function setFooterDates() {
     const yearSpan = document.getElementById("year");
     const lastModifiedPara = document.getElementById("lastModified");
 
@@ -52,4 +47,4 @@ function setFooterDates() {
     if (lastModifiedPara) {
         lastModifiedPara.textContent = `Última Modificação: ${document.lastModified}`;
     }
-}
+});
