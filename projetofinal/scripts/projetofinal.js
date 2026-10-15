@@ -1,4 +1,3 @@
-// Catálogo de livros do clube
 const catalogoLivros = [
   { id: 1, titulo: "O Hobbit", autor: "J.R.R. Tolkien", genero: "fantasia", capa: "images/livro-1.jpg" },
   { id: 2, titulo: "1984", autor: "George Orwell", genero: "ficcao", capa: "images/livro-2.jpg" },
@@ -6,13 +5,11 @@ const catalogoLivros = [
   { id: 4, titulo: "Duna", autor: "Frank Herbert", genero: "ficcao", capa: "images/livro-4.jpg" }
 ];
 
-// Função 1: Recuperar itens do localStorage
 function obterEstanteSalva() {
   const dados = localStorage.getItem("estanteLivrosTecelao");
   return dados ? JSON.parse(dados) : [];
 }
 
-// Função 2: Adicionar ou remover livros da estante
 function alternarEstante(idLivro) {
   let estante = obterEstanteSalva();
   const index = estante.indexOf(idLivro);
@@ -31,7 +28,6 @@ function alternarEstante(idLivro) {
   renderizarEstante();
 }
 
-// Função 3: Renderizar o catálogo dinâmico usando Template Literals
 function renderizarCatalogo(livros) {
   const container = document.querySelector("#container-catalogo");
   if (!container) return;
@@ -48,8 +44,7 @@ function renderizarCatalogo(livros) {
     const naEstante = estante.includes(livro.id);
     const card = document.createElement("article");
     card.className = "card";
-    
-    // Uso exclusivo de Template Literals
+
     card.innerHTML = `
       <img src="${livro.capa}" alt="Capa do livro ${livro.titulo}" loading="lazy">
       <div class="card-content">
@@ -65,7 +60,6 @@ function renderizarCatalogo(livros) {
   });
 }
 
-// Função 4: Renderizar os itens salvos na Estante Virtual
 function renderizarEstante() {
   const container = document.querySelector("#container-estante");
   if (!container) return;
@@ -95,7 +89,6 @@ function renderizarEstante() {
   });
 }
 
-// Event Listeners e inicialização no DOM
 document.addEventListener("DOMContentLoaded", () => {
   renderizarCatalogo(catalogoLivros);
   renderizarEstante();

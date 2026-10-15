@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tecelão de Histórias | Estante Virtual</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="estilos/projetofinal.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
@@ -28,15 +28,15 @@
     <div class="form-group" style="max-width: 300px; margin: 1rem 0 2rem 0;">
       <label for="filtro-genero">Filtrar por Gênero:</label>
       <select id="filtro-genero">
-        <option value="todos">Todos os Gêneros</option>
-        <option value="fantasia">Fantasia</option>
+        <option value="todos">Todos os Gêneros (50 Livros)</option>
+        <option value="fantasia">Fantasia & Sagas</option>
         <option value="ficcao">Ficção Científica</option>
         <option value="romance">Romance</option>
-      </select>
+        <option value="misterio">Mistério & Suspense</option>
+    </select>
     </div>
 
     <section id="container-catalogo" class="grid-cards">
-      <!-- Cards renderizados dinamicamente via JS -->
     </section>
 
     <hr style="margin: 3rem 0; border: none; border-top: 2px dashed var(--accent);">
@@ -45,7 +45,6 @@
     <p style="margin-bottom: 1rem;">Os livros salvos abaixo permanecem salvos no seu navegador através do <code>localStorage</code>.</p>
     
     <section id="container-estante" class="grid-cards">
-      <!-- Livros favoritos do usuário -->
     </section>
   </main>
 
@@ -54,6 +53,6 @@
     <p><a href="referencias.html">Página de Referências e Fontes</a></p>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="scripts/projetofinal.js"></script>
 </body>
 </html>
