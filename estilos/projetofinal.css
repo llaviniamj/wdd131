@@ -1,0 +1,208 @@
+/* --- PALETA DE CORES TONS DE CAFÉ & BEGE PASTEL (PARC) --- */
+:root {
+  --primary: #3E2723;       /* Café Expresso */
+  --secondary: #A76D45;     /* Caramelo Quente */
+  --accent: #D7A87E;        /* Cappuccino */
+  --bg-light: #FDFBF7;      /* Bege Creme Pastel */
+  --card-bg: #F4EBE1;       /* Espuma de Leite */
+  --text-dark: #2D241E;     /* Grão Torrado */
+  --text-light: #ffffff;
+  --font-heading: 'Merriweather', serif;
+  --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --spacing: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- CABEÇALHO E NAVEGAÇÃO --- */
+header {
+  background-color: var(--primary);
+  color: var(--text-light);
+  padding: var(--spacing) 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+header h1 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+main {
+  flex: 1;
+  max-width: 1100px;
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 1.5rem;
+  background: linear-gradient(rgba(62, 39, 35, 0.75), rgba(62, 39, 35, 0.75)), url('../images/hero-cafe.jpg') center/cover no-repeat;
+  color: var(--text-light);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.hero h2 {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* --- GRID DE CARDS --- */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(62, 39, 35, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.2rem;
+  border: 1px solid var(--accent);
+}
+
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.card-content {
+  padding: 0.8rem 0;
+}
+
+.card-content h3 {
+  font-family: var(--font-heading);
+  color: var(--primary);
+  margin-bottom: 0.4rem;
+}
+
+/* --- BOTÕES --- */
+.btn {
+  background-color: var(--secondary);
+  color: var(--text-light);
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--primary);
+}
+
+/* --- FORMULÁRIOS --- */
+.form-container {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--accent);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  background-color: var(--bg-light);
+  font-family: var(--font-body);
+}
+
+/* --- RODAPÉ --- */
+footer {
+  background-color: var(--primary);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: auto;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .hero h2 {
+    font-size: 1.7rem;
+  }
+}
