@@ -71,7 +71,7 @@ main {
 .hero {
   text-align: center;
   padding: 4rem 1.5rem;
-  background: linear-gradient(rgba(62, 39, 35, 0.75), rgba(62, 39, 35, 0.75)), url('../images/hero-cafe.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(62, 39, 35, 0.75), rgba(62, 39, 35, 0.75)), url('../imagens/clay-banks-unsplash.jpg') center/cover no-repeat;
   color: var(--text-light);
   border-radius: 8px;
   margin-bottom: 2rem;
